@@ -7,18 +7,20 @@ var port = Number(process.env.PORT || 3000);
 
 
 var paths = {
-  index: 'pages/index'
+  index: 'partials/index'
 };
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 //Serve static assets
-app.use(express.static('public'));
-// app.use(express.static('views/layouts/'));
+app.use(express.static('public/'));
+app.use(express.static('views/layouts/'));
+app.use(express.static('public/img/**.*'));
 
 app.get('/', function(req,res){
-  res.render(paths.index);
+  var name = 'Patrick';
+  res.render(paths.index, {name:name});
 });
 
 //listening port

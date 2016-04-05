@@ -1,1 +1,11 @@
-@import '_partials/_body.scss';
+//Global
+@import '_components/_global.scss';
+//Components
+@import '_components/_sidebar.scss';
+@import '_components/_mobile-navbar.scss';
+@import '_components/_side-content.scss';
+@import '_components/_mobile-sidecontent.scss';
+
+
+//Mixins
+@import '_mixins/_breakpoints.scss';

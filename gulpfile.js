@@ -13,17 +13,17 @@ var gulp = require('gulp'),
 var rawPaths = {
   // handleBars: ['raw/views/**/*.handlebars'],
   handleBars: ['views/**/*.handlebars'],
-  scss: 'raw/scss/**/*.scss',
+  scss: 'raw/scss/**/*.*',
   js: 'raw/js/**.js',
-  img: 'raw/img/*'
+  img: 'public/img/**.{svg,png,jpeg,gif}'
 };
 
 //distribution paths -> public
 var publicPath = {
   handleBars: 'views/',
-  css: './public/css',
-  js:  './public/js',
-  img: './public/img'
+  css: 'public/css',
+  js:  'public/js',
+  img: 'public/img/**.*'
 };
 
 
@@ -35,7 +35,7 @@ gulp.task('inject', function(){
   var options = {
     bowerJson: require('./bower.json'), // where our bower.json file resides
     directory: './public/lib', //where the bower components are located
-    ignorePath: '../../\../public' // trims the path file in our link hrefs
+    ignorePath: '../../public' // trims the path file in our link hrefs
   };
 
   //injectSrc options
@@ -60,7 +60,7 @@ gulp.task('inject', function(){
 gulp.task('sass',function(){
   return gulp.src(rawPaths.scss)
          .pipe(plumber())
-         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
          .pipe(prefix())
          .pipe(rename('main.min.css'))
          .pipe(gulp.dest(publicPath.css));
@@ -83,10 +83,10 @@ gulp.task('js', function(){
 
 //Image Minify
 gulp.task('image', function(){
-  return gulp.src(rawPaths.img)
+  return gulp.src(publicPath.img)
          .pipe(plumber())
          .pipe(imagemin())
-         .pipe(gulp.dest(publicPath.img));
+         .pipe(gulp.dest('public/img'));
 });
 
 /**********************************************************************/

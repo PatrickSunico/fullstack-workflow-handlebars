@@ -16,11 +16,16 @@
     "tests"
   ],
   "dependencies": {
+    "normalize-css": "^4.0.0",
     "bootstrap": "^3.3.6",
-    "font-awesome": "^4.5.0",
-    "normalize-css": "^4.0.0"
+    "font-awesome": "^4.5.0"
   },
   "overrides": {
+    "normalize-css":{
+      "main": [
+        "normalize.css"
+      ]
+    },
     "bootstrap": {
       "main": [
         "dist/js/bootstrap.min.js",
