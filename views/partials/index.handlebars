@@ -7,162 +7,42 @@
   <!-- uncomment code for absolute positioning tweek see top comment in css -->
   <!-- <div class="absolute-wrapper"> </div> -->
   <!-- Menu -->
-  <div class="side-menu">
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <!-- Hamburger -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-          <svg class="logo" align="center" viewBox="0 0 71 70" xmlns="http://www.w3.org/2000/svg">
-            <title>Logo-sm</title>
-            <g fill="none" fill-rule="evenodd">
-              <path fill="#88D498" d="M.83 0h69.963v69.702H.83z" />
-              <text font-family="LucidaGrande, Lucida Grande" font-size="44.544" fill="#FFF" transform="translate(.83)">
-                <tspan x="20.989" y="51.713">R</tspan>
-              </text>
-            </g>
-          </svg>
-        </a>
-
-      </div>
-
-      <!-- Main Menu -->
-      <div class="side-menu-container navbar-collapse collapse navbar-right">
-        <ul class="nav navbar-nav">
-          <!-- default navbar class for mobile screens-->
-
-          <li class="profile visible-lg">
-            <span class="img-placeholder">
-              <img src="img/cat.jpg" alt="" />
-            </span>
-            <span class="text-placeholder">
-            <h2>Welcome back,</h2>
-            <h1>{{name}}</h1>
-            </span>
-          </li>
-
-          <li class="dashboard active">
-            <a href="#">
-              <span class="dashboard-link">
-                <i class="fa fa-pencil-square-o"></i>
-              </span> New Post
-            </a>
-          </li>
-          <li class="dashboard active">
-            <a href="#">
-              <span class="dashboard-link">
-                <i class="fa fa-archive"></i>
-              </span> Collections
-            </a>
-          </li>
-
-          <li class="hidden-lg active">
-            <a href="#">
-              <span class="glyphicon glyphicon-user"> </span>
-              <span class="caret"></span>
-            </a>
-          </li>
-
-
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </nav>
-
-  </div>
 
   <!-- Main Content -->
   <div class="side-body">
     <div class="container-fluid">
+      {{#each blogs}}
+      <div class="blog-title">
+        <h1> {{this.title}} </h1>
+      </div>
 
-        <div class="blog-title">
-          <h1> Main Content here </h1>
-        </div>
-
-        <span class="date">
+      <span class="date">
           <p>
-            <strong>  Date Posted:</strong>
+            <strong>  Date Posted: {{../now}} </strong>
           </p>
         </span>
 
-        <span class="content">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-          sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-          duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <span class="content">
+        <p>{{this.body}}</p>
         </span>
-
-
-        <!-- <span class=box><a href="#">Edit</a></span>
-        <span class=box><a href="#">Delete</a></span>
-        <span class=box><a href="#">View</a></span> -->
+        {{/each}}
 
     </div>
+
     <div class="btn-group btn-group-justified" role="group" aria-label="...">
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i>
-Edit</button>
+        <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit
+        </button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default"><i class="fa fa-trash"></i>
-Delete</button>
+        <button type="button" class="btn btn-default"><i class="fa fa-trash"></i> Delete
+        </button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default"><i class="fa fa-external-link"></i>
-View</button>
+        <button type="button" class="btn btn-default"><i class="fa fa-external-link"></i> View
+        </button>
       </div>
     </div>
     <!--  end side-body -->
   </div>
-
-
-  <div class="side-body">
-    <div class="container-fluid">
-
-        <div class="blog-title">
-          <h1> Main Content here </h1>
-        </div>
-
-        <span class="date">
-          <p>
-            <strong>  Date Posted:</strong>
-          </p>
-        </span>
-
-        <span class="content">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-          sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-          duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        </span>
-
-
-        <!-- <span class=box><a href="#">Edit</a></span>
-        <span class=box><a href="#">Delete</a></span>
-        <span class=box><a href="#">View</a></span> -->
-
-    </div>
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i>
-  Edit</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default"><i class="fa fa-trash"></i>
-  Delete</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default"><i class="fa fa-external-link"></i>
-  View</button>
-      </div>
-    </div>
-    <!--  end side-body -->
-  </div>
+</div>

@@ -21,3 +21,4 @@
 // });
 
 //if width <= 768
+$('#editor').trumbowyg();

@@ -1,9 +1,10 @@
-@include breakpoint-min-1200{
+@include special-breakpoint1{ //desktop
   .side-body {
     margin-left: 420px;
     overflow: hidden;
     margin-top: 60px;
     margin-right: 120px;
+    margin-bottom: 60px;
     border: 1px solid #000;
 
     .blog-title {

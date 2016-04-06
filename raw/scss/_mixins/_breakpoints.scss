@@ -50,3 +50,15 @@
     @content;
   }
 }
+
+@mixin special-breakpoint1 { // Desktop
+  @media only screen and (min-width: 1200px) and (min-width: 1199px){
+    @content;
+  }
+}
+
+@mixin special-breakpoint2 { //Mobile
+  @media only screen and (max-width: 1200px) and (max-width: 1199px){
+    @content;
+  }
+}

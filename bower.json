@@ -18,10 +18,11 @@
   "dependencies": {
     "normalize-css": "^4.0.0",
     "bootstrap": "^3.3.6",
-    "font-awesome": "^4.5.0"
+    "font-awesome": "^4.5.0",
+    "trumbowyg": "^1.1.7"
   },
   "overrides": {
-    "normalize-css":{
+    "normalize-css": {
       "main": [
         "normalize.css"
       ]
@@ -40,6 +41,12 @@
     "jquery": {
       "main": [
         "dist/jquery.min.js"
+      ]
+    },
+    "trumbowyg": {
+      "main": [
+        "dist/ui/trumbowyg.css",
+        "dist/trumbowyg.js"
       ]
     }
   }
