@@ -24,3 +24,12 @@ gulp build
 ```
 gulp
 ```
+
+#4 To start out server simply type the following command make sure you have nodemon installed 
+```
+npm start
+```
+or 
+```
+node app.js
+```
