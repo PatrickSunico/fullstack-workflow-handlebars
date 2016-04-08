@@ -29,7 +29,7 @@ var now = moment(date).format('MMMM DD, YYYY');
 var name = 'Patrick';
 
 
-var Blog = mongoose.model("Blog", blogSchema);
+var Blog = mongoose.model('Blog', blogSchema);
 //End
 
 // Blog.create({
@@ -65,8 +65,6 @@ app.use(express.static('views/layouts/'));
 app.use(express.static('public/img/**.*'));
 
 
-
-
 //Routes
 //Index show all blogs
 app.get('/blogs', function(req,res){
@@ -75,7 +73,7 @@ app.get('/blogs', function(req,res){
     if(err){
       console.log(err);
     } else {
-      res.render(paths.index, {name:name, blogs:blogs, now:now})
+      res.render(paths.index, {name:name, blogs:blogs, now:now});
     }
   });
 });
@@ -85,7 +83,6 @@ app.get('/blogs', function(req,res){
 app.get('/blogs/new', function(req, res){
   res.render(paths.new,{name:name});
 });
-
 
 
 //listening port
