@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/lib/trumbowyg/dist/ui/trumbowyg.css" />
+    <link rel="stylesheet" href="/lib/trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.css" />
     <!--endbower-->
 
     <!--inject:css-->
@@ -92,13 +93,18 @@
 
     {{{body}}} <!--ejs equiv = <% %>-->
     <!--bower:js-->
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/lib/trumbowyg/dist/trumbowyg.js"></script>
+    <script src='/lib/jquery/dist/jquery.min.js'></script>
+    <script src='/lib/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script src='/lib/trumbowyg/dist/trumbowyg.js'></script>
+    <script src='/lib/trumbowyg/dist/plugins/upload/trumbowyg.upload.js'></script>
+    <script src='/lib/trumbowyg/dist/plugins/colors/trumbowyg.colors.js'></script>
     <!--endbower-->
 
     <!--inject:js-->
     <script src="/js/main.js"></script>
     <!--endinject-->
+
+    <!-- <script>window.jQuery || document.write('<script src="/lib/jquery/dist/jquery.min.js"><\/script>')</script> -->
+
   </body>
 </html>

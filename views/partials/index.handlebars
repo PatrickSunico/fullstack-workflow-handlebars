@@ -1,8 +1,11 @@
 <style type="text/css">
   img {
     margin: 0;
+    display: none;
   }
 </style>
+{{#each blogs}}
+
 <div class="row">
   <!-- uncomment code for absolute positioning tweek see top comment in css -->
   <!-- <div class="absolute-wrapper"> </div> -->
@@ -11,21 +14,19 @@
   <!-- Main Content -->
   <div class="side-body">
     <div class="container-fluid">
-      {{#each blogs}}
       <div class="blog-title">
         <h1> {{this.title}} </h1>
       </div>
 
       <span class="date">
           <p>
-            <strong>  Date Posted: {{../now}} </strong>
+            <strong>  Date Posted:  <!--{{../now}}--> {{this.created}}   </strong>
           </p>
         </span>
 
-      <span class="content">
-        <p>{{this.body}}</p>
-        </span>
-        {{/each}}
+      <span class="content" >
+        {{{this.body}}}
+      </span>
 
     </div>
 
@@ -46,3 +47,5 @@
     <!--  end side-body -->
   </div>
 </div>
+
+{{/each}}

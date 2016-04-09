@@ -2,13 +2,28 @@
 
 <div class="side-body">
     <div class="container-fluid">
-      <form>
-        <fieldset class="form-group">
+
+      <!-- <form action="/blogs" method="POST" id="form-list">
+        <input type="text" name="{{blog.title}}" placeholder="title" value="">
+      </form> -->
+
+      <form action="/blogs" method="POST" id="form-list">
+        <!-- <fieldset class="form-group"> -->
+        <div class="field">
           <label for="formGroupExampleInput">Title</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
-        </fieldset>
+          <input type="text" name="blog[title]"  class="form-control" id="formGroupExampleInput" placeholder="Title">
+        </div>
+        <!-- </fieldset> -->
+        <div class="field">
+          <textarea id="editor" name="blog[body]" style="height: 70vh;"></textarea>
+        </div>
+        <!-- <div id="editor" type="text" placeholder="content" name="blog[body]" style="height: 70vh; padding: 2%;">
+          <h1>Test</h1>
+        </div> -->
+          <input type="submit" value="Submit">
+
       </form>
+
     </div>
-    <div id="editor" placeholder="content">
-    </div>
+
 </div>
