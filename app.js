@@ -49,7 +49,22 @@ var Blog = mongoose.model('Blog', blogSchema);
 var name = 'Patrick';
 
 
+<<<<<<< HEAD
 /*********************************************/
+=======
+var Blog = mongoose.model('Blog', blogSchema);
+//End
+
+// Blog.create({
+//   title: "Test Blog",
+//   image:"",
+//   created:
+//   body:
+//   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no"
+// });
+
+//End
+>>>>>>> 4c20e3f19ef58725be9d6c2ee3513772ca6a233f
 
 
 //Misc
@@ -68,6 +83,7 @@ var paths = {
 
 
 //Routes
+<<<<<<< HEAD
 /*********************************************/
 
 //Main index
@@ -75,6 +91,8 @@ app.get('/', function(req,res){
   res.redirect('/blogs');
 });
 
+=======
+>>>>>>> 4c20e3f19ef58725be9d6c2ee3513772ca6a233f
 //Index show all blogs
 app.get('/blogs', function(req,res){
 
@@ -83,7 +101,10 @@ app.get('/blogs', function(req,res){
     if(err){
       console.log(err);
     } else {
+<<<<<<< HEAD
       res.render(paths.index, {name:name, blogs:blogs});
+=======
+>>>>>>> 4c20e3f19ef58725be9d6c2ee3513772ca6a233f
     }
   });
 });
@@ -106,7 +127,6 @@ app.post('/blogs', function(req, res){
   });
 
 });
-
 
 
 //listening port
