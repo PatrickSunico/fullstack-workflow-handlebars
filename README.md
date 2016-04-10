@@ -11,6 +11,8 @@ bower install
 if an error occurs when installing bower components
 I suggest doing the following, source from this stack overflow question [Link](http://stackoverflow.com/questions/29865913/getting-a-permission-error-when-installing-with-bower)
 
+or read and try this as well [Link](https://stackoverflow.com/questions/26307910/npm-install-for-packages-not-working/26928119#26928119?newreg=44400c7b5e7a4382bbbbf01835c87028)
+
 ```
 sudo bower install --allow-root
 ```
