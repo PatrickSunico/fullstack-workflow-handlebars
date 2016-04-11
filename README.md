@@ -22,9 +22,6 @@ If the terminal gives an Xcode error just agree to the terms and you'll be on yo
 sudo xcodebuild -license
 ```
 
-bower permissions will be resolved soon
-
-
 #2 With our gulpfile already built with their specific tasks, we need to compile our assets and build our templates. (we execute this in order);
 
 Compile our assets
