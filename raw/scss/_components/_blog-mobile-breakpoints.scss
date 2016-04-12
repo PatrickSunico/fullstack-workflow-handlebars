@@ -3,10 +3,12 @@
 @include special-breakpoint2{ // mobile
 
   .side-body {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 80%;
+    margin: 32px auto;
+    // margin-right: 20px;
+    // margin-left: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
 
     overflow: hidden;
     border: none;
