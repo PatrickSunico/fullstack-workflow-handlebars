@@ -1,0 +1,45 @@
+div.content {
+    border: 1px solid #000;
+}
+.btn-group {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+    .btn {
+        padding: 14px;
+        border-radius: 0;
+        font-size: 16px;
+        border: solid 1px #000;
+    }
+}
+div.wrapper-container {
+    border: 1px solid #000;
+    p {
+        padding: 10px;
+        margin: 0;
+    }
+    h1 {
+        padding: 10px;
+    }
+}
+span.content {
+  p.paragraphClass {
+    height: auto;
+    max-width:100%;
+  	overflow:hidden;
+    padding: 0;
+    margin: 0 auto;
+  	img.imgClass {
+  		width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+  	}
+  }
+}
+.blog-title {
+    margin-bottom: 10px;
+}
+.date {
+    margin-bottom: 10px;
+}

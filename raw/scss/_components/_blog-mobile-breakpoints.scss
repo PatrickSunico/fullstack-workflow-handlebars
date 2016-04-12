@@ -1,0 +1,23 @@
+// @import "_global.scss";
+
+@include special-breakpoint2{ // mobile
+
+  .side-body {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    overflow: hidden;
+    border: none;
+    // margin-left: 420px;
+
+    .btn-group {
+      @extend .btn-group;
+      .btn {
+        @extend .btn;
+      }
+    }
+  }
+  //end breakpoint
+}

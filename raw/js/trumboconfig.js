@@ -2,40 +2,58 @@
 var uploadOptions = {
     serverPath: 'https://api.imgur.com/3/image',
     fileFieldName: 'image',
-    headers: {'Authorization': 'Client-ID 9e57cb1c4791cea'},
+    headers: {
+        'Authorization': 'Client-ID 9e57cb1c4791cea'
+    },
     urlPropertyName: 'data.link'
 };
-//
 
-$('textarea')
-  .trumbowyg({
+
+$('textarea').trumbowyg({
+    removeformatPasted: true,
+    fixedBtnPane: true,
+    fixedFullWidth: true,
+    semantic: true,
+    autogrow: true,
+    resetCss: true,
     btnsDef: {
-      // Create a new dropdown
-      image: {
-        dropdown: ['insertImage', 'upload'],
-        ico: 'insertImage'
-      },
-      link: {
-          dropdown: ['createLink', 'unlink', 'noembed'],
-          ico: 'link'
-      }
+        // Create new dropdowns
+        image: {
+            dropdown: ['insertImage', 'upload'],
+            ico: 'insertImage'
+        },
+        link: {
+            dropdown: ['createLink', 'unlink', 'noembed'],
+            ico: 'link'
+        },
+        design: {
+            dropdown: ['bold', 'strikethrough', 'italic', 'underline', 'removeformat'],
+            ico: 'bold'
+        },
+        align: {
+          dropdown: ['justifyLeft','justifyRight','justifyCenter','justifyFull'],
+          ico: 'justifyFull'
+        },
+        lists: {
+            dropdown: ['orderedList', 'unorderedList'],
+            ico: 'orderedList'
+        }
     },
-    // Redefine the button pane
-    btns: ['viewHTML',
-      '|', 'formatting',
-      '|', 'btnGrp-semantic',
-      '|', 'foreColor',
-      'backColor',
-      'removeformat',
-      '|', 'link',
-      '|', 'image',
-      '|', 'btnGrp-justify',
-      '|', 'btnGrp-lists',
-      '|', 'horizontalRule'
-
+    //btn groups as per their dropdown init names
+    btns: [
+        ['viewHTML'],
+        ['formatting'],
+        ['design'],
+        ['lists'],
+        ['align'],
+        ['image'],
+        ['foreColor', 'backColor'],
+        ['link'],
+        ['preformatted'],
+        ['horizontalRule'],
+        ['fullscreen']
     ],
     plugins: {
-      upload: uploadOptions
+        upload: uploadOptions
     }
-
-  });
+});

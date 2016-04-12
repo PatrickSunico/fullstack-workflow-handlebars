@@ -1,6 +1,8 @@
 //Dependencies
 /*********************************************/
 
+"use strict";
+
 var express = require('express'),
 app = express(),
 mongoose = require('mongoose'),
@@ -92,11 +94,18 @@ app.get('/', function(req,res){
 app.get('/blogs', function(req,res){
 
   Blog.find({}, function(err, blogs){
+    var date;
+    blogs.forEach(function(index){
+      date = index.created.toDateString();
+
+      return date;
+    });
+
 
     if(err){
       console.log(err);
     } else {
-      res.render(paths.index, {name:name, blogs:blogs});
+      res.render(paths.index, {name:name, blogs:blogs, date:date});
     }
   });
 });
