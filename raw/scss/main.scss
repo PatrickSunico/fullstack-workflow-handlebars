@@ -1,20 +1,3 @@
-//Global
-@import '_components/_global';
-
-//Components
-@import '_components/_sidebar';
-@import '_components/_mobile-navbar';
-@import '_components/_trumbo';
-
-//_blogs style
-@import '_components/_blog';
-
-
-//Custom Breakpoints
-@import '_components/_blog-desktop-breakpoints';
-@import '_components/_blog-mobile-breakpoints';
-
-
 
 //Mixins
 @import '_mixins/_breakpoints';

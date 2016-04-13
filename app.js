@@ -31,50 +31,11 @@ app.use(express.static('public/img/**.*'));
 
 /*********************************************/
 
-
-//Mongoose/ Model Config
-/*********************************************/
-
-mongoose.connect('mongodb://localhost/reposte_app');
-var blogSchema = new mongoose.Schema({
-  title: String,
-  name: String, //UserName
-  body: String,
-  created: {type: Date, default: Date.now}
-
-},{timestamps: {createdAt: 'created_at'}});
-
-//Default Blog Model
-var Blog = mongoose.model('Blog', blogSchema);
-
-//Name Placeholder
-var name = 'Patrick';
-
-
-/*********************************************/
-var Blog = mongoose.model('Blog', blogSchema);
-//End
-
-// Blog.create({
-//   title: "Test Blog",
-//   image:"",
-//   created:
-//   body:
-//   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no"
-// });
-
-//End
-
-
-//Misc
-/*********************************************/
-//listening port
 var port = Number(process.env.PORT || 3000);
 
 //pages paths
 var paths = {
-  index: 'partials/index',
-  new: 'partials/newblog'
+  index: 'partials/index'
 };
 
 /*********************************************/
@@ -84,50 +45,9 @@ var paths = {
 //Routes
 /*********************************************/
 
-//Main index
-app.get('/', function(req,res){
-  res.redirect('/blogs');
-});
 
+/*********************************************/
 
-//Index show all blogs
-app.get('/blogs', function(req,res){
-
-  Blog.find({}, function(err, blogs){
-    var date;
-    blogs.forEach(function(index){
-      date = index.created.toDateString();
-
-      return date;
-    });
-
-
-    if(err){
-      console.log(err);
-    } else {
-      res.render(paths.index, {name:name, blogs:blogs, date:date});
-    }
-  });
-});
-
-//New Route
-app.get('/blogs/new', function(req, res){
-  res.render(paths.new,{name:name});
-});
-
-//Create Route
-//POST
-app.post('/blogs', function(req, res){
-
-  Blog.create(req.body.blog, function(err, newBlog){
-    if(err){
-      res.render(paths.new);
-    } else {
-      res.redirect('/blogs');
-    }
-  });
-
-});
 
 
 //listening port

@@ -18,8 +18,7 @@
   "dependencies": {
     "normalize-css": "^4.0.0",
     "bootstrap": "^3.3.6",
-    "font-awesome": "^4.5.0",
-    "trumbowyg": "2.0.0-beta.8"
+    "font-awesome": "^4.5.0"
   },
   "overrides": {
     "normalize-css": {
@@ -41,16 +40,6 @@
     "jquery": {
       "main": [
         "dist/jquery.min.js"
-      ]
-    },
-    "trumbowyg": {
-      "main": [
-        "dist/ui/trumbowyg.css",
-        "dist/trumbowyg.js",
-        "dist/plugins/upload/trumbowyg.upload.js",
-        "dist/plugins/colors/trumbowyg.colors.js",
-        "dist/plugins/colors/ui/trumbowyg.colors.css",
-        "dist/plugins/preformatted/trumbowyg.preformatted.min.js"
       ]
     }
   }
